@@ -36,7 +36,6 @@ namespace TwoSum
             */
 
             List<int> complements = new List<int>();
-            int complementIndex;
             int[] result = new int[2];
 
             for (int i = 0; i < nums.Length; i++)
@@ -47,7 +46,7 @@ namespace TwoSum
             for (int i = 0; i < nums.Length; i++)
             {
                 int complement = target - nums[i];
-                complementIndex = complements.IndexOf(complement);
+                int complementIndex = complements.IndexOf(complement);
 
                 if (complementIndex != -1 && i != complementIndex)
                 {
